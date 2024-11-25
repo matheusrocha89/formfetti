@@ -5,8 +5,9 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
   resolve: {
+    preserveSymlinks: true,
     alias: {
-      formfetti: path.resolve(__dirname, "../src"), // Alias to the library's src
+      formfetti: path.resolve(__dirname, "../src/index.ts"),
     },
   },
 });
