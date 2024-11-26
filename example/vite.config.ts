@@ -8,6 +8,7 @@ export default defineConfig({
     preserveSymlinks: true,
     alias: {
       formfetti: path.resolve(__dirname, "../src/index.ts"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 });
