@@ -8,6 +8,17 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     setupFiles: "./vitest.setup.ts",
+    coverage: {
+      provider: "v8",
+      reporter: ["html-spa"],
+      include: ["src/**/*.{ts,tsx}"],
+      exclude: [
+        "**/node_modules/**",
+        "**/*.test.{ts,tsx}",
+        "**/*.spec.{ts,tsx}",
+        "**/index.{ts,tsx}",
+      ],
+    },
   },
   resolve: {
     alias: {
