@@ -12,8 +12,9 @@
     "declaration": true,
     "declarationMap": true,
     "declarationDir": "dist",
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": ["vitest/globals"]
   },
-  "include": ["src", "example"],
+  "include": ["src", "example", "vitest.setup.ts"],
   "exclude": ["node_modules", "dist"]
 }
