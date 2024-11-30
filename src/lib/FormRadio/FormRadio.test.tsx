@@ -18,6 +18,14 @@ describe("FormRadio", () => {
       />
     );
 
+    const radioInputs = screen.getAllByRole("radio");
+    expect(radioInputs).toHaveLength(2);
+    radioInputs.forEach((input, index) => {
+      expect(input).toHaveAttribute("name", "radio");
+      expect(input).toHaveAttribute("value", options[index].value);
+      expect(input).toHaveAttribute("type", "radio");
+    });
+
     expect(screen.getByText("Option 1")).toBeInTheDocument();
     expect(screen.getByText("Option 2")).toBeInTheDocument();
   });
